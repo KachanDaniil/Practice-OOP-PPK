@@ -3,29 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kachanlab3;
+package kachanlab4;
 
 /**
  *
  * @author admin
  */
+import kachanlab3.ViewableResult;
+import kachanlab3.View;
+
 /**
  * ConcreteCreator (шаблон проектирования Factory Method)<br>
  * Объявляет метод, "фабрикующий" объекты
  *
  * @author xone
  * @version 1.0
- * @see Viewable
- * @see ViewableResult#getView()
+ * @see ViewableResult
+ * @see ViewableTable#getView()
  */
-public class ViewableResult implements Viewable {
+public class ViewableTable extends ViewableResult {
 
     /**
-     * Создаёт отображаемый объект {@linkplain ViewResult}
+     * Создаёт отображаемый объект {@linkplain ViewTable}
      */
     @Override
     public View getView() {
-        return new ViewResult();
+        return new ViewTable();
     }
-
 }
